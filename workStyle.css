@@ -1,0 +1,93 @@
+#navbar {
+    background: linear-gradient(rgba(0, 0, 0, 0.297), rgba(0, 0, 0, 0));
+    backdrop-filter: blur(5px);
+
+    .nav-link {
+        color: rgb(255, 255, 255);
+        font-size: 19px;
+        text-decoration: rgba(255, 255, 255, 0) 2px overline;
+        font-weight: 500;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .nav-link:hover {
+        opacity: 100%;
+        transition: 0.5s;
+        text-shadow: 3px 0px 15px rgba(255, 255, 255);
+        text-decoration: rgba(255, 255, 255, 0.4) 2px overline;
+    }
+
+    .nav-link:not(:hover) {
+        opacity: 70%;
+        transition: 0.5s;
+    }
+}
+
+#collapsibleNavbar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+body {
+    background: black;
+    justify-content: center;
+}
+
+#design, #coding {
+    padding: 100px;
+    width: 100%;
+}
+
+.container-namecard, .container-notes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 500px;
+    width: 100%;
+
+    .img-container-namecard, .img-container-notes {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .text-namecard, .text-notes {
+        width: 400px;
+        padding-left: 20px;
+        padding-top: 20px;
+        color: white;
+        position: relative;
+
+        .link {
+            position: absolute;
+            bottom: 0;
+            padding-bottom: 20px;
+        }
+    }
+}
+
+.img-container-namecard img, .img-container-notes img {
+    width: 400px;
+    object-fit: cover;
+}
+
+.ind-color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.colors {
+    display: flex;
+    padding: 10px;
+}
+
+.section-header {
+    color: rgb(74, 74, 74);
+    text-align: center;
+    font-size: 100px;
+    padding-bottom: 20px;
+}

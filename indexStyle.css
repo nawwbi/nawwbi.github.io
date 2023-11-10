@@ -1,0 +1,248 @@
+#navbar {
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(2px);
+
+    .nav-link {
+        color: rgb(255, 255, 255);
+        font-size: 19px;
+        text-decoration: rgba(255, 255, 255, 0) 2px overline;
+        font-weight: 500;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .nav-link:hover {
+        opacity: 100%;
+        transition: 0.5s;
+        text-shadow: 3px 0px 15px rgba(0, 0, 0, 0.5);
+        text-decoration: rgba(255, 255, 255, 0.4) 2px overline;
+    }
+
+    .nav-link:not(:hover) {
+        opacity: 70%;
+        transition: 0.5s;
+    }
+}
+
+#collapsibleNavbar {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+}
+
+body {
+    background: linear-gradient(rgb(0, 0, 0) 0%, gray 20%, rgb(255, 255, 255) 30%);
+}
+
+.a {
+    color: rgb(255, 255, 255);
+    transition: 0.5s;
+    text-decoration: rgba(255, 131, 212, 0) 2px underline;
+}
+
+
+.a:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: 3px 0px 15px rgb(255, 255, 255);
+    transition: 0.5s;
+    text-decoration: rgba(252, 252, 252) 2px underline;
+    font-size: larger;
+}
+
+#home {
+    height: 110%;
+
+    .top-page {
+        text-align: center;
+        padding-top: 300px;
+        padding-bottom: 250px;
+
+        .home-header {
+            font-weight: bolder;
+            font-size: 130px;
+            color: rgb(255, 255, 255);
+            text-shadow: 3px 3px 10px rgb(207, 207, 207);
+        }
+
+        .home-para {
+            font-size: 20px;
+            color: rgb(177, 177, 177);
+        }
+    }
+}
+
+p {
+    font-size: 17px;
+    color: gray;
+    text-align: center;
+}
+
+.header-me,
+.header-work,
+.header-contact {
+    text-align: center;
+    font-size: 60px;
+    font-weight: bold;
+    color: black;
+    text-decoration: black 1px underline;
+    text-underline-offset: 10px;
+}
+
+
+.container-me {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-left: 200px;
+    margin-right: 200px;
+    margin-bottom: 115px;
+    margin-top: 100px;
+
+    #image-me {
+        height: 170px;
+        width: 170px;
+        object-fit: cover;
+        margin: 1px;
+        filter: grayscale(100);
+        transition: 0.5s;
+    }
+
+    #image-me:hover {
+        filter: grayscale(0);
+        transition: 0.5s;
+        transform: scale(1.05);
+    }
+
+    .title-me {
+        padding-top: 30px;
+        color: black;
+        font-size: 30px;
+    }
+
+    .para-me {
+        max-width: 550px;
+    }
+}
+
+.contact-info {
+    justify-content: center;
+    margin-top: 260px;
+    margin-bottom: 260px;
+}
+
+.container-bub {
+    position: absolute;
+    z-index: -99;
+    width: 100vw;
+}
+
+.bub {
+    position: relative;
+    display: flex;
+}
+
+.bub span {
+    position: relative;
+    width: 100px;
+    height: 200px;
+    background: rgba(20, 20, 20, 0.3);
+    margin: 0 10px;
+    border-radius: 10%;
+    animation: bubbles 25s linear infinite;
+    animation-duration: calc(170s / var(--i));
+    filter: blur(10px);
+}
+
+@keyframes bubbles {
+    0% {
+        transform: translateY(100vh) scale(0.5);
+    }
+
+    100% {
+        transform: translateY(0) scale(1.5);
+    }
+}
+
+.and-work {
+    margin: 0;
+}
+
+.container-work {
+    justify-content: center;
+
+    .item {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+
+        #image {
+            width: 250px;
+            height: 250px;
+            object-fit: cover;
+            padding: 2px;
+            filter: grayscale(100%) blur(1px);
+            object-position: 30% 100%;
+            transition: 0.8s;
+        }
+
+        .text-work {
+            opacity: 0;
+            transition: 0.5s;
+        }
+    }
+
+    .item:hover {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        #image {
+            filter: grayscale(0%);
+            width: 490px;
+            cursor: pointer;
+            object-position: 100% 100%;
+            transition: 0.8s;
+        }
+
+        .text-work {
+            opacity: 100%;
+            transition: 0.5s;
+        }
+    }
+}
+
+.text-wrap-work-design {
+    transform: rotate(90deg);
+    text-align: center;
+    height: 100%;
+
+    .text-work {
+        font-size: 70px;
+        margin: 0;
+        color: black;
+    }
+}
+
+.text-wrap-work-dev {
+    transform: rotate(-90deg);
+    text-align: center;
+    height: 100%;
+
+    .text-work {
+        font-size: 70px;
+        margin: 0;
+        color: black;
+    }
+}
+
+.and-work {
+    font-size: 100px;
+    color: black;
+}
+
+.container-work-all {
+    padding: 100px;
+
+}
