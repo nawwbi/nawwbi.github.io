@@ -77,6 +77,8 @@
 
 body {
     background-color: black;
+    width: 100%;
+    margin: 0;
 }
 
 @media screen and (min-width: 768px) {
@@ -111,12 +113,6 @@ body {
     }
 }
 
-/* p {
-    font-size: 17px;
-    color: gray;
-    text-align: center;
-} */
-
 .header-me,
 .header-work,
 .header-contact {
@@ -131,9 +127,8 @@ body {
 .container-me {
     display: flex;
     justify-content: center;
+    align-items: center;
     text-align: center;
-    margin-left: 200px;
-    margin-right: 200px;
     margin-bottom: 115px;
     margin-top: 100px;
 
@@ -151,9 +146,16 @@ body {
         font-size: 30px;
     }
 
-    .para-me {
-        max-width: 550px;
-        color: white;
+    .container-para-me {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+        .para-me {
+            width: 50%;
+            color: white;
+        }
     }
 }
 
@@ -297,4 +299,41 @@ a {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+@media (max-width: 768px) {
+
+    .header-me,
+    .header-work,
+    .header-contact {
+        text-align: center;
+        font-size: 90px;
+        font-weight: bold;
+        color: rgb(74, 74, 74);
+        text-underline-offset: 10px;
+    }
+
+    .container-me {    
+        .container-para-me {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+    
+            .para-me {
+                width: 80%;
+                color: white;
+            }
+        }
+    }
+
+
+    .card-email,
+    .card-github,
+    .card-phone {
+        background-color: rgb(10, 10, 10);
+        height: 150px;
+        width: 310px;
+        transition: 0.3s;
+    }
 }
