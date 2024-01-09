@@ -1,0 +1,204 @@
+.vid-container-notes,
+.vid-container-suggestAI,
+.vid-container-soi,
+.vid-container-movie,
+.vid-container-song {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.vid-container-notes video,
+.vid-container-suggestAI video,
+.vid-container-soi video,
+.vid-container-movie video,
+.vid-container-song video {
+    width: 100%;
+    height: 100%;
+}
+
+.container-notes,
+.container-suggestAI,
+.container-soi,
+.container-movie,
+.container-song {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.text-notes,
+.text-suggestAI,
+.text-soi,
+.text-movie,
+.text-song {
+    width: 25%;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    color: white;
+}
+
+.img-container-notes,
+.img-container-suggestAI,
+.img-container-soi,
+.img-container-movie,
+.img-container-song {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-container-notes img,
+.img-container-suggestAI img,
+.img-container-soi img,
+.img-container-movie img,
+.img-container-song img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+.mySlides,
+.mySlides2,
+.mySlides3,
+.mySlides4,
+.mySlides5 {
+    display: none
+}
+
+/* Slideshow container */
+.slideshow-container,
+.slideshow-container2,
+.slideshow-container3,
+.slideshow-container4,
+.slideshow-container5 {
+    width: 25%;
+    height: 100%;
+    position: relative;
+}
+
+/* Next & previous buttons */
+.prev,
+.next,
+.prev2,
+.next2,
+.prev3,
+.next3,
+.prev4,
+.next4,
+.prev5,
+.next5 {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: rgb(255, 169, 169);
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next,
+.next2,
+.next3,
+.next4,
+.next5 {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+@media (max-width: 768px) {
+
+    .container-notes,
+    .container-suggestAI,
+    .container-soi,
+    .container-movie,
+    .container-song {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .img-container-notes,
+    .img-container-suggestAI,
+    .img-container-soi,
+    .img-container-movie,
+    .img-container-song {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+    .img-container-notes img,
+    .img-container-suggestAI img,
+    .img-container-soi img,
+    .img-container-movie img,
+    .img-container-song img {
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .vid-container-notes video,
+    .vid-container-suggestAI video,
+    .vid-container-soi video,
+    .vid-container-movie video,
+    .vid-container-song video {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center top;
+    }
+
+    .text-notes,
+    .text-suggestAI,
+    .text-soi,
+    .text-movie,
+    .text-song {
+        width: 85%;
+        height: 50%;
+        margin-left: 20px;
+        margin-right: 20px;
+        padding-top: 20px;
+        color: white;
+    }
+
+    .slideshow-container,
+    .slideshow-container2,
+    .slideshow-container3,
+    .slideshow-container4,
+    .slideshow-container5 {
+        width: 50%;
+        height: 70%;
+        position: relative;
+    }
+}
+
+/* ///////////////////////////////////// */
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
