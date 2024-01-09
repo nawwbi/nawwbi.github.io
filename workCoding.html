@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Website</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@100;400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/391dbc840a.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="workStyle.css">
+    <link rel="stylesheet" href="workStyleCoding.css">
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+
+<body style="font-family: 'Playfair Display';">
+    <nav class="navbar-container">
+        <div class="navbar">
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger"><i style="color: white;"
+                    class="fa-solid fa-bars"></i></label>
+            <div class="collapsibleNavbar">
+                <a class="nav-link" href="index.html"><i class="fa-solid fa-house"></i></a>
+                <a class="nav-link" href="workGrid.html">#all</a>
+                <a class="nav-link" href="workDesign.html">#design</a>
+                <a class="nav-link" href="workCoding.html">#code</a>
+            </div>
+        </div>
+    </nav>
+
+    <section id="coding">
+        <h1 class="section-header">coding</h1>
+        <div id="NotesApp" class="container-notes">
+            <div class="slideshow-container">
+                <div class="mySlides fade img-container-notes">
+                    <img src="/resources/notes(1).png" />
+                </div>
+                <div class="mySlides fade img-container-notes">
+                    <img src="/resources/notes(2).png" />
+                </div>
+                <div class="mySlides fade vid-container-notes">
+                    <video autoplay loop controls src="/resources/notes application video.mp4"></video>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+            <div class="text-notes">
+                <h1>notes application</h1>
+                <p>This is an application that was made using 'low-code', where users can add new notes and
+                    write detailed descrptions under it. Other than that, users can also delete the notes
+                    and edit them to their liking. There is also another tab available called the 'Favourites',
+                    where users can add their important notes and quickly access them.
+                    <br><br>
+                    Application: 'Glide' <br><br>
+                </p>
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <div id="SuggestAI" class="container-suggestAI">
+            <div class="slideshow-container2">
+                <div class="mySlides2 fade img-container-suggestAI">
+                    <img src="/resources/suggestAI(1).png" />
+                </div>
+                <div class="mySlides2 fade img-container-suggestAI">
+                    <img src="/resources/suggestAI(2).png" />
+                </div>
+                <a class="prev2" onclick="plusSlides2(-1)">&#10094;</a>
+                <a class="next2" onclick="plusSlides2(1)">&#10095;</a>
+            </div>
+            <div class="text-suggestAI">
+                <h1>"suggestAI"</h1>
+                <p>This application was made using 'low-code', and utilizes OpenAI. According to the questions that the
+                    user asks
+                    through the search bar, this application would provide the top 5 best answers for that question.
+                    This application
+                    also allows users to plcae their asked questions and answers into a 'Favourites' to allow easy
+                    access.
+                    <br><br>
+                    Application: 'Glide' <br><br>
+                </p>
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <div id="SOIweb" class="container-soi">
+            <div class="slideshow-container3">
+                <div class="mySlides3 fade img-container-soi">
+                    <img src="/resources/soi(1).png" />
+                </div>
+                <div class="mySlides3 fade vid-container-soi">
+                    <video autoplay loop controls src="/resources/SOI video.mp4"></video>
+                </div>
+                <a class="prev3" onclick="plusSlides3(-1)">&#10094;</a>
+                <a class="next3" onclick="plusSlides3(1)">&#10095;</a>
+            </div>
+            <div class="text-soi">
+                <h1>fill</h1>
+                <p>fill
+                    <br><br>
+                    Application: fill<br><br>
+                </p>
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <div id="MovieList" class="container-movie">
+            <div class="slideshow-container4">
+                <div class="mySlides4 fade img-container-movie">
+                    <img src="/resources/showMovies(1).png" />
+                </div>
+                <div class="mySlides4 fade img-container-movie">
+                    <img src="/resources/showMovies(2).png" />
+                </div>
+                <div class="mySlides4 fade vid-container-movie">
+                    <video autoplay loop controls src="/resources/myMovies.mp4"></video>
+                </div>
+                <a class="prev4" onclick="plusSlides4(-1)">&#10094;</a>
+                <a class="next4" onclick="plusSlides4(1)">&#10095;</a>
+            </div>
+            <div class="text-movie">
+                <h1>fill</h1>
+                <p>fill
+                    <br><br>
+                    Application: fill<br><br>
+                </p>
+            </div>
+        </div>
+
+        <br><br><br>
+
+        <div id="SongList" class="container-song">
+            <div class="slideshow-container5">
+                <div class="mySlides5 fade img-container-song">
+                    <img src="/resources/mySongs(1).png" />
+                </div>
+                <div class="mySlides5 fade img-container-song">
+                    <img src="/resources/mySongs(2).png" />
+                </div>
+                <div class="mySlides5 fade vid-container-song">
+                    <video autoplay loop controls src="/resources/mySongs.mp4"></video>
+                </div>
+                <a class="prev5" onclick="plusSlides5(-1)">&#10094;</a>
+                <a class="next5" onclick="plusSlides5(1)">&#10095;</a>
+            </div>
+            <div class="text-song">
+                <h1>fill</h1>
+                <p>fill
+                    <br><br>
+                    Application: fill<br><br>
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("mySlides");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideIndex - 1].style.display = "block";
+        }
+    </script>
+
+    <script>
+        let slideIndex2 = 1;
+        showSlides2(slideIndex2);
+
+        function plusSlides2(n) {
+            showSlides2(slideIndex2 += n);
+        }
+
+        function currentSlide2(n) {
+            showSlides2(slideIndex2 = n);
+        }
+
+        function showSlides2(n) {
+            let i;
+            let slides2 = document.getElementsByClassName("mySlides2");
+            if (n > slides2.length) { slideIndex2 = 1 }
+            if (n < 1) { slideIndex2 = slides2.length }
+            for (i = 0; i < slides2.length; i++) {
+                slides2[i].style.display = "none";
+            }
+            slides2[slideIndex2 - 1].style.display = "block";
+        }
+    </script>
+
+    <script>
+        let slideIndex3 = 1;
+        showSlides3(slideIndex3);
+
+        function plusSlides3(n) {
+            showSlides3(slideIndex3 += n);
+        }
+
+        function currentSlide3(n) {
+            showSlides3(slideIndex3 = n);
+        }
+
+        function showSlides3(n) {
+            let i;
+            let slides3 = document.getElementsByClassName("mySlides3");
+            if (n > slides3.length) { slideIndex3 = 1 }
+            if (n < 1) { slideIndex3 = slides3.length }
+            for (i = 0; i < slides3.length; i++) {
+                slides3[i].style.display = "none";
+            }
+            slides3[slideIndex3 - 1].style.display = "block";
+        }
+    </script>
+
+    <script>
+        let slideIndex4 = 1;
+        showSlides4(slideIndex4);
+
+        function plusSlides4(n) {
+            showSlides4(slideIndex4 += n);
+        }
+
+        function currentSlide4(n) {
+            showSlides4(slideIndex4 = n);
+        }
+
+        function showSlides4(n) {
+            let i;
+            let slides4 = document.getElementsByClassName("mySlides4");
+            if (n > slides4.length) { slideIndex4 = 1 }
+            if (n < 1) { slideIndex4 = slides4.length }
+            for (i = 0; i < slides4.length; i++) {
+                slides4[i].style.display = "none";
+            }
+            slides4[slideIndex4 - 1].style.display = "block";
+        }
+    </script>
+
+    <script>
+        let slideIndex5 = 1;
+        showSlides5(slideIndex5);
+
+        function plusSlides5(n) {
+            showSlides5(slideIndex5 += n);
+        }
+
+        function currentSlide5(n) {
+            showSlides5(slideIndex5 = n);
+        }
+
+        function showSlides5(n) {
+            let i;
+            let slides5 = document.getElementsByClassName("mySlides5");
+            if (n > slides5.length) { slideIndex5 = 1 }
+            if (n < 1) { slideIndex5 = slides5.length }
+            for (i = 0; i < slides5.length; i++) {
+                slides5[i].style.display = "none";
+            }
+            slides5[slideIndex5 - 1].style.display = "block";
+        }
+    </script>
+</body>
+
+</html>

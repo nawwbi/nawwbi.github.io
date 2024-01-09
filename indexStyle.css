@@ -1,91 +1,129 @@
-#navbar {
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(2px);
-
-    .nav-link {
-        color: rgb(255, 255, 255);
-        font-size: 19px;
-        text-decoration: rgba(255, 255, 255, 0) 2px overline;
-        font-weight: 500;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    .nav-link:hover {
-        opacity: 100%;
-        transition: 0.5s;
-        text-shadow: 3px 0px 15px rgba(0, 0, 0, 0.5);
-        text-decoration: rgba(255, 255, 255, 0.4) 2px overline;
-    }
-
-    .nav-link:not(:hover) {
-        opacity: 70%;
-        transition: 0.5s;
-    }
+* {
+    scroll-behavior: smooth;
 }
 
-#collapsibleNavbar {
+.navbar-container {
     display: flex;
-    width: 100%;
+    align-items: center;
     justify-content: center;
-    text-align: center;
+    position: sticky;
+    backdrop-filter: blur(5px);
+    top: 0;
+    z-index: 1;
 }
+
+.collapsibleNavbar {
+    display: flex;
+    padding: 10px;
+}
+
+.nav-link {
+    color: white;
+    font-size: 19px;
+    text-decoration: rgba(255, 255, 255, 0);
+    font-weight: 500;
+    padding: 8px 30px 8px 30px;
+}
+
+.nav-link:hover {
+    opacity: 100%;
+    transition: 0.5s;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255);
+    text-decoration: rgba(255, 255, 255, 0.4);
+}
+
+.nav-link:not(:hover) {
+    opacity: 70%;
+    transition: 0.5s;
+}
+
+.navbar [type=checkbox] {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    user-select: none;
+    transition: 0.6s;
+}
+
+@media (max-width: 768px) {
+
+    input[type=checkbox]:checked~.collapsibleNavbar {
+        display: block;
+        transition: 0.6s;
+    }
+
+    .hamburger {
+        align-self: flex-end;
+        padding: 20px;
+        margin-right: 10px;
+        display: block;
+        transition: 0.6s;
+    }
+
+    .collapsibleNavbar {
+        display: none;
+        flex-direction: column;
+    }
+
+    .navbar {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
 
 body {
-    background: linear-gradient(rgb(0, 0, 0) 0%, gray 20%, rgb(255, 255, 255) 30%);
+    background-color: black;
 }
 
-.a {
-    color: rgb(255, 255, 255);
-    transition: 0.5s;
-    text-decoration: rgba(255, 131, 212, 0) 2px underline;
+@media screen and (min-width: 768px) {
+    .home-para {
+        font-size: 15px;
+    }
 }
 
-
-.a:hover {
-    color: rgb(255, 255, 255);
-    text-shadow: 3px 0px 15px rgb(255, 255, 255);
-    transition: 0.5s;
-    text-decoration: rgba(252, 252, 252) 2px underline;
-    font-size: larger;
+@media screen and (min-width: 1024px) {
+    .home-para {
+        font-size: 25px;
+    }
 }
 
 #home {
-    height: 110%;
-
     .top-page {
-        text-align: center;
-        padding-top: 300px;
-        padding-bottom: 250px;
+        height: 100%;
 
-        .home-header {
-            font-weight: bolder;
-            font-size: 130px;
-            color: rgb(255, 255, 255);
-            text-shadow: 3px 3px 10px rgb(207, 207, 207);
-        }
+        .top-page-div {
+            height: 100%;
+            width: 100%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            text-align: center;
 
-        .home-para {
-            font-size: 20px;
-            color: rgb(177, 177, 177);
+            .home-para {
+                color: #ffa5c7;
+                margin: 0;
+            }
         }
     }
 }
 
-p {
+/* p {
     font-size: 17px;
     color: gray;
     text-align: center;
-}
+} */
 
 .header-me,
 .header-work,
 .header-contact {
     text-align: center;
-    font-size: 60px;
+    font-size: 100px;
     font-weight: bold;
-    color: black;
-    text-decoration: black 1px underline;
+    color: rgb(74, 74, 74);
     text-underline-offset: 10px;
 }
 
@@ -104,68 +142,24 @@ p {
         width: 170px;
         object-fit: cover;
         margin: 1px;
-        filter: grayscale(100);
-        transition: 0.5s;
-    }
 
-    #image-me:hover {
-        filter: grayscale(0);
-        transition: 0.5s;
-        transform: scale(1.05);
     }
 
     .title-me {
         padding-top: 30px;
-        color: black;
+        color: white;
         font-size: 30px;
     }
 
     .para-me {
         max-width: 550px;
-    }
-}
-
-.contact-info {
-    justify-content: center;
-    margin-top: 260px;
-    margin-bottom: 260px;
-}
-
-.container-bub {
-    position: absolute;
-    z-index: -99;
-    width: 100vw;
-}
-
-.bub {
-    position: relative;
-    display: flex;
-}
-
-.bub span {
-    position: relative;
-    width: 100px;
-    height: 200px;
-    background: rgba(20, 20, 20, 0.3);
-    margin: 0 10px;
-    border-radius: 10%;
-    animation: bubbles 25s linear infinite;
-    animation-duration: calc(170s / var(--i));
-    filter: blur(10px);
-}
-
-@keyframes bubbles {
-    0% {
-        transform: translateY(100vh) scale(0.5);
-    }
-
-    100% {
-        transform: translateY(0) scale(1.5);
+        color: white;
     }
 }
 
 .and-work {
     margin: 0;
+    text-align: center;
 }
 
 .container-work {
@@ -221,7 +215,7 @@ p {
     .text-work {
         font-size: 70px;
         margin: 0;
-        color: black;
+        color: white;
     }
 }
 
@@ -233,16 +227,74 @@ p {
     .text-work {
         font-size: 70px;
         margin: 0;
-        color: black;
+        color: white;
     }
 }
 
 .and-work {
     font-size: 100px;
-    color: black;
+    color: white;
 }
 
 .container-work-all {
     padding: 100px;
 
+}
+
+.contact-div {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+}
+
+.contact-info {
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    gap: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fa {
+    font-size: 50px;
+    display: block;
+}
+
+.card-email,
+.card-github,
+.card-phone {
+    background-color: rgb(10, 10, 10);
+    height: 150px;
+    width: 350px;
+    transition: 0.3s;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+.card-email:hover,
+.card-github:hover,
+.card-phone:hover {
+    background-color: rgb(15, 15, 15);
+    transition: 0.3s;
+    transform: scale(1.03);
+
+    a {
+        color: #ffa5c7;
+        transition: 0.3s;
+    }
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }

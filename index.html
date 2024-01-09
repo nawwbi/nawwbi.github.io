@@ -4,7 +4,8 @@
     <title>My Website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/391dbc840a.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Poppins:wght@100;400&display=swap"
         rel="stylesheet">
@@ -14,52 +15,36 @@
 
 
 <body style="font-family: 'Playfair Display';">
-    <nav id="navbar" class="navbar navbar-expand fixed-top">
-        <div class="collapsibleNavbar" id="collapsibleNavbar">
-            <ul class="navbar-nav">
+    <section id="home">
+        <div class="top-page">
+            <div class="top-page-div">
+                <p class="home-para"> //nabilah's portfolio// </p>
+            </div>
+        </div>
+    </section>
+
+    <nav class="navbar-container">
+        <div class="navbar">
+            <input type="checkbox" id="checkbox_toggle" />
+            <label for="checkbox_toggle" class="hamburger"><i style="color: white;"
+                    class="fa-solid fa-bars"></i></label>
+            <div class="collapsibleNavbar">
                 <a class="nav-link" href="#home">home</a>
                 <a class="nav-link" href="#about-me">about me</a>
                 <a class="nav-link" href="#my-work">my work</a>
                 <a class="nav-link" href="#contact">contact</a>
-            </ul>
+            </div>
         </div>
     </nav>
-
-    <div class="container-bub">
-        <div class="bub">
-            <span style="--i:21"></span>
-            <span style="--i:35"></span>
-            <span style="--i:20"></span>
-            <span style="--i:16"></span>
-            <span style="--i:25"></span>
-            <span style="--i:44"></span>
-            <span style="--i:10"></span>
-            <span style="--i:20"></span>
-            <span style="--i:21"></span>
-            <span style="--i:35"></span>
-            <span style="--i:20"></span>
-            <span style="--i:16"></span>
-            <span style="--i:25"></span>
-            <span style="--i:44"></span>
-            <span style="--i:10"></span>
-            <span style="--i:20"></span>
-        </div>
-    </div>
-
-    <section id="home">
-        <div class="top-page">
-            <h1 class="home-header">Welcome!</h1>
-            <p class="home-para">Get to know more about me <a class="a" href="#about-me">here</a> >></p>
-        </div>
-    </section>
+    <br><br><br>
 
     <section id="about-me">
         <h1 class="header-me" id="header-me">about me</h1>
         <div class="container-me">
             <div class="item-me">
-                    <img id="image-me" alt="my cat!" src="/resources/catpic(1).jpg">
-                    <img id="image-me" alt="me :>" src="/resources/me.jpg">
-                    <img id="image-me" alt="also my cat!" src="/resources/catpic(3).jpg">
+                <img id="image-me" alt="my cat!" src="/resources/catpic(1).jpg">
+                <img id="image-me" alt="me :>" src="/resources/me.jpg">
+                <img id="image-me" alt="also my cat!" src="/resources/catpic(3).jpg">
                 <h4 class="title-me">Hello! My name is Nabilah.</h4>
                 <p class="para-me">I am a student learning full-stack development. I enjoy developing websites and
                     adding special features to it.
@@ -72,12 +57,11 @@
     </section>
 
     <section id="my-work">
-        <h1 class="header-work">my work</h1>
-
+        <h1 class="header-work">my work</h1><br>
         <div class="container-work-all">
             <div class="container-work">
                 <div class="item">
-                    <a href="work.html"><img id="image" src="/resources/project1.png"></a>
+                    <a href="workDesign.html"><img id="image" src="/resources/project1.png"></a>
                     <div class="text-wrap-work-design">
                         <p class="text-work">design</p>
                     </div>
@@ -93,22 +77,42 @@
                     <div class="text-wrap-work-dev">
                         <p class="text-work">coding</p>
                     </div>
-                    <a href="work.html"><img id="image" src="/resources/programming.jpg"></a>
+                    <a href="workCoding.html"><img id="image" src="/resources/programming.jpg"></a>
                 </div>
             </div>
         </div>
-
     </section>
 
     <section id="contact">
         <h1 class="header-contact" id="header-contact">contact</h1>
-        <div class="contact-info">
-            <p>gmail: <span style="color: black;">nabilahbjumahat@gmail.com</span></p>
-            <p>github: <span style="color: black;">@nawwbi</span></p>
-            <p>phone: <span style="color: black;">+65 8298 2344</span></p>
+        <div class="contact-div">
+            <div class="contact-info">
+                <div class="card-email">
+                    <div class="container">
+                        <a href="mailto: abc@example.com">
+                            <i class="fa fa-solid fa-envelope"></i>
+                            nabilahbjumahat@gmail.com
+                        </a>
+                    </div>
+                </div>
+                <div class="card-github">
+                    <div class="container">
+                        <a href="https://github.com/nawwbi">
+                            <i class="fa fa-brands fa-github"></i>
+                            @nawwbi
+                        </a>
+                    </div>
+                </div>
+                <div class="card-phone">
+                    <div class="container">
+                            <i class="fa fa-solid fa-phone"></i>
+                            +65 8298 2344
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-
 </body>
 
 </html>
