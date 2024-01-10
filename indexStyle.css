@@ -80,6 +80,7 @@
             height: 100%;
             display: block;
             padding-left: 0;
+            padding-right: 0;
         }
     }
 }
@@ -129,7 +130,7 @@ body {
     text-align: center;
     font-size: 100px;
     font-weight: bold;
-    color: rgb(74, 74, 74);
+    color: rgb(90, 90, 90);
     text-underline-offset: 10px;
 }
 
@@ -206,9 +207,9 @@ body {
 
         #image {
             filter: grayscale(0%);
-            width: 490px;
+            width: 375px;
             cursor: pointer;
-            object-position: 100% 100%;
+            object-position: 25% 100%;
             transition: 0.8s;
         }
 
@@ -346,4 +347,27 @@ a {
         width: 310px;
         transition: 0.3s;
     }
+
+    .text-wrap-work-design,
+    .text-wrap-work-dev {
+        transform: rotate(0);
+        text-align: center;
+        height: 100%;
+    }
+
+    .container-work {
+        .item:hover {
+            #image {
+                filter: grayscale(0%);
+                width: 300px;
+                cursor: pointer;
+                object-position: 25% 100%;
+                transition: 0.8s;
+            }
+        }
+    }
+}
+
+#contact {
+    margin-bottom: 150px;
 }
